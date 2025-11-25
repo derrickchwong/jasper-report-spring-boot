@@ -20,7 +20,7 @@ A Spring Boot application that generates JasperReports and stores them in a loca
 The application stores generated reports to a local path configured in `application.properties`:
 
 ```properties
-report.storage.path=/home/wongderrick/workspaces/jasper-reports-gcs-bucket
+report.storage.path=/path/for/gcs/mount
 ```
 
 Update this path to match your GCS bucket mount point.
@@ -60,7 +60,7 @@ GET /api/reports/employees?format=pdf
 ```json
 {
   "message": "Report generated successfully",
-  "filePath": "/home/wongderrick/workspaces/jasper-reports-gcs-bucket/employee_report_20251125_143022.pdf"
+  "filePath": "/path/for/gcs/mount/employee_report_20251125_143022.pdf"
 }
 ```
 
